@@ -89,3 +89,9 @@ const createUsernames = function (accs) {
   });
 };
 createUsernames(accounts);
+
+const calcBalance = function (movements) {
+  const balance = movements.reduce((acc, cur) => acc + cur, 0);
+  labelBalance.textContent = `${balance} EUR`;
+};
+calcBalance(account1.movements);
